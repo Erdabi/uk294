@@ -1,9 +1,20 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
   <span>Gemstone Galleria</span>
   <span class="example-spacer"></span>
-  <button mat-button>Categories</button>
-  <button mat-button>Products</button>
+  <button mat-button [matMenuTriggerFor]="menu">Categorys</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>create</button>
+    <button mat-menu-item>list</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu">Products</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>create</button>
+    <button mat-menu-item>list</button>
+  </mat-menu>
+  <button mat-button>Sign in</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>login</button>
+    <button mat-menu-item>register</button>
+  </mat-menu>
 </mat-toolbar>

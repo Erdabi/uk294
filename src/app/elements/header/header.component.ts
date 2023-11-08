@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
 
 @Component({
   selector: 'pm-header',
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
 
 }
+ 
