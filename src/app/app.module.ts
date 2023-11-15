@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HeaderComponent} from "./elements/header/header.component";
 import {FooterComponent} from "./elements/footer/footer.component";
 import { HttpClientModule } from '@angular/common/http';
+import {ApiModule, Configuration} from "./openapi-client";
 
 
 @NgModule({
@@ -18,7 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    
+    ApiModule.forRoot(() => {
+      return new Configuration({
+        basePath: 'https://product-manager.cyrotech.ch'
+      })
+    }),
     HeaderComponent,
     FooterComponent
   ],

@@ -29,14 +29,12 @@ export class RegisterComponent {
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
-  logform() {
+  submit() {
     console.log(this.formGroup);
     console.log(this.formGroup.errors);
     if (this.formGroup.valid) {
-    this.userService.login(this.formGroup.value as RegisterDto).subscribe(token => {
-    console.log(token)
-    localStorage.setItem('ACCESS_TOKEN', token.token as string);
-    alert('erfolgreich eingeloggt');
+    this.userService.register(this.formGroup.value as RegisterDto).subscribe(val => {
+    alert('erfolgreich registriert');
       })
     }
   }

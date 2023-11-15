@@ -1,16 +1,4 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.component.scss">
-    <title>Webshop</title>
-</head>
-
-
-
-
-
-<div class="form-box">
-    <form [formGroup]="formGroup" (ngSubmit)="logform()">
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
       <mat-form-field>
         <label>Name</label>
         <input matInput type="text" formControlName="firstName">
@@ -54,4 +42,3 @@
       <br>
       <button type="submit">Speichern</button>
     </form>
-    </div>
