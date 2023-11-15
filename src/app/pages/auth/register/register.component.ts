@@ -29,7 +29,7 @@ export class RegisterComponent {
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
-  submit() {
+  regform() {
     console.log(this.formGroup);
     console.log(this.formGroup.errors);
     if (this.formGroup.valid) {

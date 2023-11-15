@@ -6,9 +6,9 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HeaderComponent} from "./elements/header/header.component";
 import {FooterComponent} from "./elements/footer/footer.component";
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ApiModule, Configuration} from "./openapi-client";
-
+import {AuthorizationInterceptor} from "./interceptors/authorization.interceptor";
 
 @NgModule({
   declarations: [
@@ -27,7 +27,14 @@ import {ApiModule, Configuration} from "./openapi-client";
     HeaderComponent,
     FooterComponent
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: AuthorizationInterceptor
+    }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {
