@@ -24,7 +24,7 @@ password: ['', [Validators.required, Validators.minLength(8)]]
 });
 }
 
-submit() {
+logform() {
 console.log(this.formGroup);
 console.log(this.formGroup.errors);
 if(this.formGroup.valid) {
