@@ -1,1 +1,8 @@
-<p>products-list works!</p>
+<div class="container">
+  <!-- List of products -->
+  <div class="product" *ngFor="let product of products; let i = index">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <span>{{ product.price }}$</span>
+  </div>
+</div>

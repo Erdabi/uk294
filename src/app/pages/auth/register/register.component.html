@@ -1,44 +1,71 @@
+<!-- Angular form with formGroup and ngSubmit -->
 <form [formGroup]="formGroup" (ngSubmit)="regform()">
-      <mat-form-field>
-        <label>Name</label>
-        <input matInput type="text" formControlName="firstName">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Surname</label>
-        <input  matInput type="text" formControlName="lastName">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Adress</label>
-        <input matInput type="text" formControlName="street">
-      </mat-form-field>
-      <mat-form-field>
-        <label>ZIP</label>
-        <input  matInput type="text" formControlName="zip">
-      </mat-form-field>
-      <mat-form-field>
-        <label>City</label>
-        <input matInput type="text" formControlName="city">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Coutnry</label>
-        <input matInput type="text" formControlName="country">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Tel.</label>
-        <input matInput type="text" formControlName="mobilePhone">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Phone</label>
-        <input matInput type="text" formControlName="phone">
-      </mat-form-field>
-      <mat-form-field>
-        <label>EMail</label>
-        <input matInput type="text" formControlName="email">
-      </mat-form-field>
-      <mat-form-field>
-        <label>Passwort</label>
-        <input  matInput type="password" formControlName="password">
-      </mat-form-field>
-      <br>
-      <button type="submit">Speichern</button>
-    </form>
+
+  <!-- Angular Material form fields for user registration details -->
+
+  <!-- Name -->
+  <mat-form-field>
+    <label>Name</label>
+    <input matInput type="text" formControlName="firstName">
+  </mat-form-field>
+
+  <!-- Surname -->
+  <mat-form-field>
+    <label>Surname</label>
+    <input matInput type="text" formControlName="lastName">
+  </mat-form-field>
+
+  <!-- Address -->
+  <mat-form-field>
+    <label>Address</label>
+    <input matInput type="text" formControlName="street">
+  </mat-form-field>
+
+  <!-- ZIP Code -->
+  <mat-form-field>
+    <label>ZIP</label>
+    <input matInput type="text" formControlName="zip">
+  </mat-form-field>
+
+  <!-- City -->
+  <mat-form-field>
+    <label>City</label>
+    <input matInput type="text" formControlName="city">
+  </mat-form-field>
+
+  <!-- Country -->
+  <mat-form-field>
+    <label>Country</label>
+    <input matInput type="text" formControlName="country">
+  </mat-form-field>
+
+  <!-- Telephone Number -->
+  <mat-form-field>
+    <label>Tel.</label>
+    <input matInput type="text" formControlName="mobilePhone">
+  </mat-form-field>
+
+  <!-- Phone Number -->
+  <mat-form-field>
+    <label>Phone</label>
+    <input matInput type="text" formControlName="phone">
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field>
+    <label>Email</label>
+    <input matInput type="text" formControlName="email">
+  </mat-form-field>
+
+  <!-- Password -->
+  <mat-form-field>
+    <label>Password</label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+
+  <!-- Line break for spacing -->
+  <br>
+
+  <!-- Submit button -->
+  <button type="submit">Speichern</button>
+</form>

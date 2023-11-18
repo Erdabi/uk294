@@ -1,20 +1,30 @@
+<!-- Angular form with formGroup and ngSubmit -->
 <form [formGroup]="formGroup" (ngSubmit)="logform()">
-    <mat-card>
-      <mat-card-header>
-        Login
-      </mat-card-header>
-      <br>
-        <mat-card-content>
-        <label>Email</label>
-        <input type="email" placeholder="Type your Email" formControlName="email">
-        </mat-card-content>
-        <mat-card-content>
-          <label>Password</label>
-          <input type="password" placeholder="Type your password" formControlName="password">
-        </mat-card-content>
-      <mat-card-actions class="flex flex-row just-center gap-1">
-        <button mat-button mat-raised-button color="primary" type="submit" >Anmelden</button>
-      </mat-card-actions>
-    </mat-card>
-  </form>
+  <!-- Angular Material card for login -->
+  <mat-card>
+    <!-- Card header for login -->
+    <mat-card-header>
+      Login
+    </mat-card-header>
+    <br> <!-- Line break for spacing -->
 
+    <!-- Card content section -->
+    <mat-card-content>
+      <!-- Label and input field for Email -->
+      <label>Email</label>
+      <input type="email" placeholder="Type your Email" formControlName="email">
+    </mat-card-content>
+
+    <!-- Another card content section for Password -->
+    <mat-card-content>
+      <label>Password</label>
+      <input type="password" placeholder="Type your password" formControlName="password">
+    </mat-card-content>
+
+    <!-- Card actions section with a button for submission -->
+    <mat-card-actions class="flex flex-row just-center gap-1">
+      <!-- Submit button with Angular Material styling -->
+      <button mat-button mat-raised-button color="primary" type="submit">Anmelden</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

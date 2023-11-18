@@ -1,0 +1,51 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product {
+  box-sizing: border-box;
+  width: 301px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 15px;
+}
+
+.product h3 {
+  margin-top: 110px;
+}
+
+.product p {
+  font-size: 14px;
+  color: #666;
+}
+
+.product span {
+  font-weight: bold;
+  color: #999;
+  display: block;
+  margin-top: 10px;
+}
+
+.product button {
+  background-color: #5536;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.product button:hover {
+  background-color: #563454;
+}

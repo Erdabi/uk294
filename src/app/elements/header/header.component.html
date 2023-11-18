@@ -1,20 +1,34 @@
+<!-- Angular Material toolbar with primary color -->
 <mat-toolbar color="primary">
+
+  <!-- Application name -->
   <span>Gemstone Galleria</span>
+
+  <!-- Spacer to push the buttons to the right -->
   <span class="example-spacer"></span>
+
+  <!-- Category menu button with dropdown -->
   <button mat-button [matMenuTriggerFor]="menucategories">Categorys</button>
   <mat-menu #menucategories="matMenu">
+    <!-- Menu items for categories -->
     <button mat-menu-item routerLink="/categories/modify">create</button>
     <button mat-menu-item routerLink="/categories/list">list</button>
   </mat-menu>
 
+  <!-- Products menu button with dropdown -->
   <button mat-button [matMenuTriggerFor]="menuproducts">Products</button>
   <mat-menu #menuproducts="matMenu">
+    <!-- Menu items for products -->
     <button mat-menu-item routerLink="/products/modify">create</button>
     <button mat-menu-item routerLink="/products/list">list</button>
   </mat-menu>
+
+  <!-- Sign in menu button with dropdown -->
   <button mat-button [matMenuTriggerFor]="menulogin">Sign in</button>
   <mat-menu #menulogin="matMenu">
+    <!-- Menu items for sign in -->
     <button mat-menu-item routerLink="/auth/login">login</button>
     <button mat-menu-item routerLink="/auth/register">register</button>
   </mat-menu>
+
 </mat-toolbar>
